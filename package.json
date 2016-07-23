@@ -1,19 +1,24 @@
 {
-  "name": "metalsmith-gzip",
-  "version": "1.1.0",
-  "author": "Ludovico Fischer",
+  "name": "metalsmith-brotli",
+  "version": "1.0.0",
+  "author": "Michel Kraemer",
   "license": "MIT",
-  "description": "A Metalsmith plugin to compress build files with gzip.",
+  "description": "A Metalsmith plugin to compress build files with brotli.",
   "keywords": [
     "metalsmith",
-    "plugin"
+    "plugin",
+    "brotli",
+    "compression",
+    "web",
+    "performance"
   ],
   "main": "lib/index.js",
   "scripts": {
     "test": "node test/index.js"
   },
   "dependencies": {
-    "async": "^1.4.0",
+    "async": "^2.0.1",
+    "iltorb": "^1.0.12",
     "micromatch": "^2.2.0"
   },
   "devDependencies": {
@@ -22,8 +27,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ludovicofischer/metalsmith-gzip"
+    "url": "https://github.com/michel-kraemer/metalsmith-brotli"
   },
-  "homepage": "https://github.com/ludovicofischer/metalsmith-gzip",
-  "bugs": "https://github.com/ludovicofischer/metalsmith-gzip/issues"
+  "homepage": "https://github.com/michel-kraemer/metalsmith-brotli",
+  "bugs": "https://github.com/michel-kraemer/metalsmith-brotli/issues"
 }
