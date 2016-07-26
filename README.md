@@ -1,4 +1,4 @@
-# metalsmith-brotli [![Build Status](https://travis-ci.org/michel-kraemer/metalsmith-brotli.svg?branch=master)](https://travis-ci.org/michel-kraemer/metalsmith-brotli)
+# metalsmith-brotli [![Build Status](https://travis-ci.org/michel-kraemer/metalsmith-brotli.svg?branch=master)](https://travis-ci.org/michel-kraemer/metalsmith-brotli) [![npm](https://img.shields.io/npm/v/metalsmith-brotli.svg?maxAge=2592000)](https://www.npmjs.com/package/metalsmith-brotli)
 
 A [Metalsmith](http://metalsmith.io) plugin that creates compressed copies of
 the site's content using the [Brotli algorithm](https://github.com/google/brotli).
