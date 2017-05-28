@@ -55,3 +55,33 @@ test('Overwrite option has effect', function(t) {
             t.ok(files['document.pdf'], 'The original PDF is conserved');
         });
 });
+
+test('Brotli quality option can be set to 11', function(t) {
+    t.plan(2);
+    var metalsmith = Metalsmith('test/fixtures/pdf');
+    metalsmith
+      .use(brotli({
+          brotli: {
+              quality: 11
+          }
+        }))
+      .build(function(err, files) {
+          t.equal(files['index.html.br'].contents.length, 47, 'Compressed size is correct');
+          t.error(err, 'No build errors');
+      });
+});
+
+test('Brotli quality option can be set to 5', function(t) {
+    t.plan(2);
+    var metalsmith = Metalsmith('test/fixtures/pdf');
+    metalsmith
+      .use(brotli({
+          brotli: {
+              quality: 5
+          }
+        }))
+      .build(function(err, files) {
+          t.equal(files['index.html.br'].contents.length, 59, 'Compressed size is correct');
+          t.error(err, 'No build errors');
+      });
+});
