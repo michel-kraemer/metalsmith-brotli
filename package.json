@@ -20,13 +20,13 @@
     "test": "node test/index.js"
   },
   "dependencies": {
-    "async": "^2.0.1",
-    "iltorb": "^1.0.12",
-    "micromatch": "^2.2.0"
+    "async": "^2.4.1",
+    "iltorb": "^1.3.0",
+    "micromatch": "^2.3.11"
   },
   "devDependencies": {
-    "tape": "^4.2.0",
-    "metalsmith": "^2.1.0"
+    "tape": "^4.6.3",
+    "metalsmith": "^2.3.0"
   },
   "repository": {
     "type": "git",
