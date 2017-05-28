@@ -12,6 +12,9 @@
     "web",
     "performance"
   ],
+  "engines": {
+    "node": ">=4"
+  },
   "main": "lib/index.js",
   "scripts": {
     "test": "node test/index.js"
