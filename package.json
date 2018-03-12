@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "async": "^2.4.1",
-    "iltorb": "^1.3.0",
+    "iltorb": "^2.0.5",
     "micromatch": "^2.3.11"
   },
   "devDependencies": {
