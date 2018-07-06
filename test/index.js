@@ -66,7 +66,7 @@ test('Brotli quality option can be set to 11', function(t) {
           }
         }))
       .build(function(err, files) {
-          t.equal(files['index.html.br'].contents.length, 47, 'Compressed size is correct');
+          t.equal(files['index.html.br'].contents.length, 48, 'Compressed size is correct');
           t.error(err, 'No build errors');
       });
 });
