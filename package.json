@@ -20,9 +20,9 @@
     "test": "node test/index.js"
   },
   "dependencies": {
-    "async": "^2.4.1",
+    "async": "^3.2.0",
     "iltorb": "^2.3.2",
-    "micromatch": "^2.3.11"
+    "micromatch": "^4.0.2"
   },
   "devDependencies": {
     "metalsmith": "^2.3.0",
