@@ -51,18 +51,21 @@ let metalsmith = new Metalsmith(__dirname)
   }));
 ```
 
-`brotli` is the same configuration object accepted by
-[iltorb.compress](https://github.com/mayhemydg/iltorb). For example, you can
-set the compression level as follows:
+`options` is of type [BrotliOptions](https://nodejs.org/api/zlib.html#zlib_class_brotlioptions).
+For example, you can set the compression level as follows:
 
 ```javascript
+const zlib = require("zlib");
+
 let metalsmith = new Metalsmith(__dirname)
   .use(compress({
     src: ["**/*.js", "**/*.css"],
-    brotli: {
-      quality: 11
+    options: {
+      params: {
+        [zlib.constants.BROTLI_PARAM_QUALITY]: 11
+      }
     }
-}));
+  }));
 ```
 
 Add `overwrite: true` to replace files with the compressed version instead of

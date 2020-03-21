@@ -1,6 +1,7 @@
-var test = require("tape");
-var brotli = require("..");
-var Metalsmith = require("metalsmith");
+const test = require("tape");
+const brotli = require("..");
+const Metalsmith = require("metalsmith");
+const zlib = require("zlib");
 
 test("By default, only the specified files are compressed", t => {
   t.plan(9);
@@ -72,8 +73,10 @@ test("Brotli quality option can be set to 11", t => {
   let metalsmith = Metalsmith("test/fixtures/pdf");
   metalsmith
     .use(brotli({
-      brotli: {
-        quality: 11
+      options: {
+        params: {
+          [zlib.constants.BROTLI_PARAM_QUALITY]: 11
+        }
       }
     }))
     .build((err, files) => {
@@ -87,8 +90,10 @@ test("Brotli quality option can be set to 5", t => {
   let metalsmith = Metalsmith("test/fixtures/pdf");
   metalsmith
     .use(brotli({
-      brotli: {
-        quality: 5
+      options: {
+        params: {
+          [zlib.constants.BROTLI_PARAM_QUALITY]: 5
+        }
       }
     }))
     .build((err, files) => {
