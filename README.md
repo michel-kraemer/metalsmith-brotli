@@ -15,10 +15,10 @@ $ npm install metalsmith-brotli
 ## Usage
 
 ```javascript
-var Metalsmith = require("metalsmith");
-var brotli = require("metalsmith-brotli");
+const Metalsmith = require("metalsmith");
+const brotli = require("metalsmith-brotli");
 
-var metalsmith = new Metalsmith(__dirname)
+let metalsmith = new Metalsmith(__dirname)
   .use(brotli());
 ```
 
@@ -45,9 +45,9 @@ the available options keys:
 which specifies which types of files to compress.
 
 ```javascript
-var metalsmith = new Metalsmith(__dirname)
+let metalsmith = new Metalsmith(__dirname)
   .use(compress({
-    src: ['**/*.js', '**/*.css'] // only compress JavaScript and CSS
+    src: ["**/*.js", "**/*.css"] // only compress JavaScript and CSS
   }));
 ```
 
@@ -56,9 +56,9 @@ var metalsmith = new Metalsmith(__dirname)
 set the compression level as follows:
 
 ```javascript
-var metalsmith = new Metalsmith(__dirname)
+let metalsmith = new Metalsmith(__dirname)
   .use(compress({
-    src: ['**/*.js', '**/*.css'],
+    src: ["**/*.js", "**/*.css"],
     brotli: {
       quality: 11
     }
@@ -69,7 +69,7 @@ Add `overwrite: true` to replace files with the compressed version instead of
 creating a copy with the `.br` extension:
 
 ```javascript
-var metalsmith = new Metalsmith(__dirname)
+let metalsmith = new Metalsmith(__dirname)
   .use(compress({
     overwrite: true
   });
