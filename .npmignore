@@ -1,2 +1,3 @@
 test
-.travis.yml
+.github
+.tool-versions
