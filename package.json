@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-brotli",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "author": "Michel Kraemer",
   "license": "MIT",
   "description": "A Metalsmith plugin to compress build files with brotli.",
